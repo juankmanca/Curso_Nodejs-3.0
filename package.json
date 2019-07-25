@@ -1,0 +1,33 @@
+{
+  "name": "tercera-entrega",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juankmanca/Curso_Nodejs-3.git"
+  },
+  "author": "Juan Camilo Ocampo Gomez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juankmanca/Curso_Nodejs-3/issues"
+  },
+  "homepage": "https://github.com/juankmanca/Curso_Nodejs-3#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "hbs": "^4.0.4",
+    "jquery": "^3.4.1",
+    "memorystore": "^1.6.1",
+    "mongoose": "^5.6.2",
+    "mongoose-unique-validator": "^2.0.3",
+    "popper.js": "^1.15.0"
+  }
+}

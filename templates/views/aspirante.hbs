@@ -1,0 +1,15 @@
+{{>Navigation}}
+<br>
+<h1>Matricularse en un curso</h1>
+<div class="section">
+    <form action="./aspirante" class="card" method="POST">
+        <div class="form-group">
+            <label>En que curso desea matricularse: </label>
+            {{{listarCursosDisponiblesSelect listado}}}
+        </div>
+        <input type="text" name="id" value="{{id}}" hidden>
+        <input type="submit" value="Matricularse" class="btn btn-success">
+    </form>
+</div>
+<h2> {{mostrar}} </h2>
+{{>footer}} 

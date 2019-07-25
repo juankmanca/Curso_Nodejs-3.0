@@ -1,0 +1,41 @@
+{{>Navigation}}
+{{>CoordinadorNav}}
+<br>
+<h3> {{mostrar}} </h3>
+
+<h1>Registrar nuevo curso</h1>
+<div class="section">
+    <form action="./NuevoCurso" class="card" method="POST">
+        <div class="form-group">
+            <label>Nombre Completo:</label>
+            <input type="text" name="nombre" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>id:</label>
+            <input type="number" name="id" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Descripcion:</label>
+            <input type="textarea" name="descripcion" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>valor:</label>
+            <input type="number" name="valor" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Modalidad:</label>
+            <select name="modalidad" class="form-control">
+                <option value="virtual">Virtual</option>
+                <option value="presencial">Precencial</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Intensidad horaria:</label>
+            <input type="number" name="intensidad" class="form-control" required>
+        </div>
+        <input type="submit" value="Guardar" class="btn btn-success">
+        <input type="text" name="estado" value="disponible" hidden>
+    </form>
+</div>
+
+{{>footer}}

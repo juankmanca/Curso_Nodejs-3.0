@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{!-- <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css"> --}}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Tercera entrega</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse bg-dark">
+    <div class="container-fluid text">
+      <div class="navbar-header ">
+        <a class="navbar-brand text-white" href="/">TdeA</a>
+      </div>
+      {{#if coordinador}}
+      <ul class="nav navbar-nav navbar-expand-lg navbar-left" style="margin-right: 10px">
+        <li class="nav-item " style="margin-right: 40px">
+          <a class="nav-link text-white" href="/Coordinador/NuevoCurso">Coordinador <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item " style="margin-right: 40px">
+          <a class="nav-link text-white" href="/">Interesados <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item " style="margin-right: 40px">
+          <a class="nav-link text-white" href="/formulario">Registrarse <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <ul class="nav navbar-nav navbar-right" style="margin-left: 550px">
+            <li>
+              <p class="text-white" style="margin-top: 10px"> {{nombre}} </p>
+            </li>
+            <li>
+              <form class="form-inline my-2 my-lg-0 " style="margin-left: 10px" action="/salir" method="get" id='log'>
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Cerrar Sesion</button>
+              </form>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      {{else}}
+        {{#if aspirante}}
+      <ul class="nav navbar-nav navbar-expand-lg navbar-left" style="margin-right: 10px">
+        <li class="nav-item " style="margin-right: 40px">
+          <a class="nav-link text-white" href="/aspirante">Aspirantes <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item " style="margin-right: 40px">
+          <a class="nav-link text-white" href="/">Interesados <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item " style="margin-right: 40px">
+          <a class="nav-link text-white" href="/formulario">Registrarse <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <ul class="nav navbar-nav navbar-right" style="margin-left: 550px">
+            <li>
+              <p class="text-white" style="margin-top: 10px"> {{nombre}} </p>
+            </li>
+            <li>
+              <form class="form-inline my-2 my-lg-0 " style="margin-left: 10px" action="/salir" method="get" id='log'>
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Cerrar Sesion</button>
+              </form>
+            </li>
+          </ul>
+        </li>
+      </ul>
+        {{else}}
+      <ul class="nav navbar-nav navbar-expand-lg" style="margin-right: 10px">
+        <li class="nav-item " style="margin-right: 40px">
+          <a class="nav-link text-white" href="/">Interesados <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item " style="margin-right: 40px">
+          <a class="nav-link text-white" href="/formulario">Registrarse <span class="sr-only">(current)</span></a>
+        </li>
+        <div class="nav navbar-nav navbar-right">
+          <form class="form-inline my-2 my-lg-0 " action="/ingresar" method="post" id='log'>
+            <input class="form-control mr-sm-2" type="text" name="cedula" placeholder="Ingrese su cedula">
+            <input class="form-control mr-sm-2" type="password" name="contrasena" placeholder="Ingrese su contraseña">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Ingresar</button>
+          </form>
+        </div>
+      </ul>
+      {{/if}}
+      {{/if}}
+    </div>
+  </nav>

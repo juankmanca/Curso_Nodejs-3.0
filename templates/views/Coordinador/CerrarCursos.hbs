@@ -1,0 +1,11 @@
+{{>Navigation}}
+{{>CoordinadorNav}}
+
+    {{{listarCursos result}}}
+    <h4>Cerrar Curso:</h4>
+    <form action="./CerrarCursos" method="post">
+    {{{listarCursosDisponiblesSelect listado}}}
+    <br>
+        <input type="submit" value="Cerrar" class="btn btn-success">
+    </form>
+{{>footer}}
